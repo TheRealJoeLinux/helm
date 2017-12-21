@@ -72,9 +72,9 @@ func newReleaseTestCmd(c helm.Interface, out io.Writer) *cobra.Command {
 
 func (t *releaseTestCmd) run() (err error) {
 	c, errc := t.client.RunReleaseTest(
+		helm.ReleaseTestCleanup(t.cleanup),
 		t.name,
 		helm.ReleaseTestTimeout(t.timeout),
-		helm.ReleaseTestCleanup(t.cleanup),
 	)
 	testErr := &testErr{}
 
