@@ -41,6 +41,7 @@ const (
 	PostRollback       = "post-rollback"
 	ReleaseTestSuccess = "test-success"
 	ReleaseTestFailure = "test-failure"
+	PostReady		   = "post-ready"
 )
 
 // Type of policy for deleting the hook

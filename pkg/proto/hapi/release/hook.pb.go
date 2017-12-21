@@ -42,6 +42,7 @@ const (
 	Hook_POST_ROLLBACK        Hook_Event = 8
 	Hook_RELEASE_TEST_SUCCESS Hook_Event = 9
 	Hook_RELEASE_TEST_FAILURE Hook_Event = 10
+	Hook_POST_READY			  Hook_Event = 11
 )
 
 var Hook_Event_name = map[int32]string{
@@ -56,6 +57,7 @@ var Hook_Event_name = map[int32]string{
 	8:  "POST_ROLLBACK",
 	9:  "RELEASE_TEST_SUCCESS",
 	10: "RELEASE_TEST_FAILURE",
+	11: "POST_READY",
 }
 var Hook_Event_value = map[string]int32{
 	"UNKNOWN":              0,
@@ -69,6 +71,7 @@ var Hook_Event_value = map[string]int32{
 	"POST_ROLLBACK":        8,
 	"RELEASE_TEST_SUCCESS": 9,
 	"RELEASE_TEST_FAILURE": 10,
+	"POST_READY":			11,
 }
 
 func (x Hook_Event) String() string {
